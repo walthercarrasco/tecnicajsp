@@ -1,0 +1,9 @@
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/servlet/PreferenciasServlet.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/servlet/ApiProductoServlet.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/dao/ProductoDAO.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/dao/ConexionDB.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/model/Producto.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/servlet/LogoutServlet.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/servlet/LoginServlet.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/filter/AuthFilter.java
+/home/walther/Desktop/DESARROLLOJAVA/coso/src/main/java/com/examen/servlet/ProductoServlet.java

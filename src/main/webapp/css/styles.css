@@ -1,0 +1,26 @@
+/* Estilos mínimos - solo lo necesario */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.login-box {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.code-preview {
+    background: #f1f3f5;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    max-height: 350px;
+    white-space: pre;
+}
