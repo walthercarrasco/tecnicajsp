@@ -1,8 +1,6 @@
 com/examen/dao/ProductoDAO.class
-com/examen/servlet/PreferenciasServlet.class
 com/examen/servlet/LoginServlet.class
 com/examen/model/Producto.class
-com/examen/servlet/ApiProductoServlet.class
 com/examen/filter/AuthFilter.class
 com/examen/servlet/LogoutServlet.class
 com/examen/servlet/ProductoServlet.class

@@ -11,14 +11,13 @@
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar Simplificado -->
 <nav class="navbar navbar-light bg-light border-bottom">
     <div class="container">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/">Sistema de Productos</a>
-        <div class="navbar-nav flex-row gap-3">
-            <a class="nav-link" href="${pageContext.request.contextPath}/productos">Productos</a>
-            <a class="nav-link" href="${pageContext.request.contextPath}/api/productos" target="_blank">API JSON</a>
-            <a class="nav-link text-danger" href="${pageContext.request.contextPath}/logout">Salir (${sessionScope.usuario})</a>
+        <div class="navbar-nav flex-row gap-3 align-items-center">
+            <span class="text-muted">Hola, <strong>${sessionScope.usuario}</strong></span>
+            <a class="btn btn-outline-danger btn-sm" href="${pageContext.request.contextPath}/logout">Salir</a>
         </div>
     </div>
 </nav>
@@ -27,7 +26,7 @@
 
     <!-- Mensajes flash -->
     <c:if test="${not empty sessionScope.mensaje}">
-        <div class="alert alert-${sessionScope.tipoMensaje} alert-dismissible" role="alert">
+        <div class="alert alert-${sessionScope.tipoMensaje} alert-dismissible fade show" role="alert">
             ${sessionScope.mensaje}
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
@@ -42,27 +41,6 @@
         <h4 class="mb-0">Listado de Productos</h4>
         <a href="${pageContext.request.contextPath}/productos?accion=nuevo" class="btn btn-success btn-sm">+ Nuevo Producto</a>
     </div>
-
-    <!-- Búsqueda -->
-    <form action="${pageContext.request.contextPath}/productos" method="GET" class="row g-2 mb-3">
-        <input type="hidden" name="accion" value="buscar">
-        <div class="col-md-4">
-            <input type="text" class="form-control form-control-sm" name="q"
-                   placeholder="Buscar por nombre..." value="${terminoBusqueda}">
-        </div>
-        <div class="col-md-3">
-            <select class="form-select form-select-sm" name="categoria">
-                <option value="">Todas las categorías</option>
-                <c:forEach var="cat" items="${categorias}">
-                    <option value="${cat}" ${cat == categoriaSeleccionada ? 'selected' : ''}>${cat}</option>
-                </c:forEach>
-            </select>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary btn-sm">Buscar</button>
-            <a href="${pageContext.request.contextPath}/productos" class="btn btn-outline-secondary btn-sm">Limpiar</a>
-        </div>
-    </form>
 
     <!-- Tabla CRUD -->
     <table class="table table-bordered table-hover table-sm">
@@ -93,8 +71,6 @@
                                 </span>
                             </td>
                             <td>
-                                <a href="${pageContext.request.contextPath}/productos?accion=detalle&id=${p.id}"
-                                   class="btn btn-info btn-sm">Ver</a>
                                 <a href="${pageContext.request.contextPath}/productos?accion=editar&id=${p.id}"
                                    class="btn btn-warning btn-sm">Editar</a>
                                 <a href="${pageContext.request.contextPath}/productos?accion=eliminar&id=${p.id}"

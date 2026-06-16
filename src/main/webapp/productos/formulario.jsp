@@ -10,12 +10,13 @@
 </head>
 <body>
 
+<!-- Navbar Simplificado -->
 <nav class="navbar navbar-light bg-light border-bottom">
     <div class="container">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/">Sistema de Productos</a>
-        <div class="navbar-nav flex-row gap-3">
-            <a class="nav-link" href="${pageContext.request.contextPath}/productos">Productos</a>
-            <a class="nav-link text-danger" href="${pageContext.request.contextPath}/logout">Salir</a>
+        <div class="navbar-nav flex-row gap-3 align-items-center">
+            <span class="text-muted">Hola, <strong>${sessionScope.usuario}</strong></span>
+            <a class="btn btn-outline-danger btn-sm" href="${pageContext.request.contextPath}/logout">Salir</a>
         </div>
     </div>
 </nav>
